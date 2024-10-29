@@ -1,0 +1,6 @@
+{
+  "**/*.{js,ts,html,json,md}": "eslint",
+  "**/*.{js,ts,html,css,md,json,sh}": "prettier --write",
+  "src/**/*": "cspell",
+  "**/*.ts": "tsc-files --noEmit"
+}
