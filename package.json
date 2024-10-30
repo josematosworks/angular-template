@@ -12,6 +12,7 @@
     "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
     "serve:ssr:angular-template": "node dist/angular-template/server/server.mjs",
     "lint": "eslint \"**/*.{js,ts,html,json,md}\"",
+    "lint:fix": "eslint \"**/*.{js,ts,html,json,md}\" --fix",
     "format": "prettier --write \"**/*.{js,ts,css,sh,html,md,json,yaml,yml}\"",
     "check-spelling": "cspell \"**/*\"",
     "prepare": "husky install"
