@@ -26,7 +26,7 @@ describe('AppComponent', () => {
     const cards = compiled.querySelectorAll('h3');
 
     expect(cards.length).toBe(12); // Total number of technology cards
-    expect(cards[0]?.textContent?.trim()).toBe('Angular 18.2.0');
+    expect(cards[0]?.textContent?.trim()).toBe('Angular 19.2.4');
   });
 
   it(`should have technologies array with correct length`, () => {
