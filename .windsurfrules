@@ -1,0 +1,219 @@
+# Windsurf Rules for Angular Template
+
+# Ignore build artifacts and dependencies
+ignore_patterns:
+  - "node_modules/"
+  - "dist/"
+  - ".angular/"
+  - "coverage/"
+  - ".husky/"
+  - ".git/"
+
+# Configure code analysis
+code_analysis:
+  # Use existing linting configuration
+  use_eslint: true
+  eslint_config_path: ".eslintrc.json"
+
+  # Use existing formatting configuration
+  use_prettier: true
+  prettier_config_path: ".prettierrc"
+
+  # TypeScript configuration
+  typescript:
+    tsconfig_path: "tsconfig.json"
+
+# Build and test configuration
+build:
+  command: "npm run build"
+
+test:
+  command: "npm run test:ci"
+
+lint:
+  command: "npm run lint"
+
+format:
+  command: "npm run format"
+
+# Angular-specific settings
+angular:
+  version: 19
+  use_strict_mode: true
+  component_style: "standalone"
+
+# Editor settings
+editor:
+  tab_size: 2
+  insert_spaces: true
+  trim_trailing_whitespace: true
+  insert_final_newline: true
+
+# Git hooks (already configured via husky)
+git:
+  use_husky: true
+  enforce_conventional_commits: true
+
+# Angular 19 and TypeScript Best Practices
+best_practices:
+  angular:
+    # Component best practices
+    components:
+      - "Use OnPush change detection strategy for better performance"
+      - "Keep components small and focused on a single responsibility"
+      - "Use standalone components when possible"
+      - "Implement proper lifecycle hooks cleanup"
+      - "Use @Input() setters for input validation"
+
+    # Service best practices
+    services:
+      - "Use providedIn: 'root' for singleton services"
+      - "Leverage Angular's DI system properly"
+      - "Use proper RxJS operators for async operations"
+      - "Implement proper error handling for HTTP requests"
+
+    # Performance
+    performance:
+      - "Lazy load feature modules"
+      - "Use trackBy with *ngFor directives"
+      - "Implement virtual scrolling for large lists"
+      - "Optimize bundle size with proper code splitting"
+
+  typescript:
+    # TypeScript best practices
+    general:
+      - "Use strict type checking"
+      - "Avoid any type when possible"
+      - "Use interfaces for data models"
+      - "Leverage TypeScript's utility types"
+      - "Use readonly for immutable properties"
+      - "Implement proper error handling with typed errors"
+
+    # Functional programming
+    functional:
+      - "Use pure functions when possible"
+      - "Leverage immutability patterns"
+      - "Use optional chaining and nullish coalescing"
+
+    # Testing
+    testing:
+      - "Write unit tests for business logic"
+      - "Use TestBed for Angular component testing"
+      - "Implement E2E tests for critical user flows"
+      - "Mock external dependencies in tests"
+
+# Signal Store Configuration
+signal_store:
+  enabled: true
+  structure:
+    # Define global store organization
+    pattern: "feature-based"  # Options: feature-based, domain-based, entity-based
+    directory: "src/app/store"
+
+  # Signal store best practices
+  best_practices:
+    - "Create typed signal interfaces for all store slices"
+    - "Implement immutable update patterns"
+    - "Use computed signals for derived state"
+    - "Leverage effect signals for side effects"
+    - "Implement proper error handling in signal updates"
+    - "Create selector functions for complex state queries"
+
+  # Architecture guidelines
+  architecture:
+    - "Separate state into domain-specific store slices"
+    - "Use injectable store services with providedIn: 'root'"
+    - "Implement facade pattern for complex store interactions"
+    - "Create action creators for state mutations"
+    - "Document state shape and transitions"
+
+  # Performance considerations
+  performance:
+    - "Minimize signal updates for performance"
+    - "Use toSignal() for RxJS to Signal conversions"
+    - "Implement proper memoization for expensive computations"
+    - "Consider using untracked() for non-reactive operations"
+
+# State management (enhanced)
+state_management:
+  - "Use signals as the primary state management solution"
+  - "Implement a centralized signal store for global state"
+  - "Use input signals for component-level reactivity"
+  - "Leverage computed signals for derived state"
+  - "Create effect signals for side effects and external integrations"
+  - "Implement proper unsubscribe patterns for any RxJS observables"
+  - "Consider NgRx only for very complex state management needs"
+
+# Accessibility
+accessibility:
+  - "Follow WCAG 2.1 AA standards"
+  - "Use semantic HTML elements"
+  - "Implement proper ARIA attributes when needed"
+  - "Ensure keyboard navigation works properly"
+  - "Test with screen readers"
+  - "Maintain sufficient color contrast"
+
+# Internationalization
+i18n:
+  enabled: true
+  strategy: "angular-i18n"  # or "ngx-translate" or "custom"
+  default_locale: "en-US"
+  supported_locales:
+    - "en-US"
+    - "es-ES"
+    - "fr-FR"
+  best_practices:
+    - "Use Angular's i18n system for static text"
+    - "Implement locale-specific formatting for dates, numbers, and currencies"
+    - "Consider right-to-left (RTL) language support"
+    - "Extract all user-facing strings for translation"
+
+# Security
+security:
+  - "Implement proper CSRF protection"
+  - "Use Angular's built-in XSS protection"
+  - "Sanitize user inputs"
+  - "Implement proper authentication and authorization"
+  - "Follow OWASP top 10 security guidelines"
+  - "Avoid storing sensitive information in localStorage"
+
+# CI/CD Configuration
+ci_cd:
+  provider: "github-actions"  # or "gitlab-ci", "jenkins", etc.
+  strategies:
+    - "Run tests on every pull request"
+    - "Enforce code coverage thresholds"
+    - "Deploy to staging automatically after merge to develop"
+    - "Run security scans as part of the pipeline"
+
+# Performance Monitoring
+performance_monitoring:
+  enabled: true
+  metrics:
+    - "First Contentful Paint (FCP)"
+    - "Largest Contentful Paint (LCP)"
+    - "Time to Interactive (TTI)"
+    - "Total Blocking Time (TBT)"
+    - "Cumulative Layout Shift (CLS)"
+  tools:
+    - "Lighthouse CI"
+    - "Web Vitals"
+
+# Error Handling and Logging
+error_handling:
+  strategy: "global-error-handler"
+  logging:
+    level: "warn"  # Options: debug, info, warn, error
+    persist: true
+    anonymize_user_data: true
+
+# Documentation
+documentation:
+  code:
+    - "Use JSDoc comments for public APIs"
+    - "Document complex algorithms and business logic"
+    - "Keep comments up-to-date with code changes"
+  architecture:
+    - "Maintain architecture decision records (ADRs)"
+    - "Document component relationships and data flow"
+    - "Update diagrams when architecture changes"
