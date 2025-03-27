@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
-    standalone: true,
-    imports: [CommonModule],
-    selector: 'app-root',
-    template: `
+  standalone: true,
+  imports: [CommonModule],
+  selector: 'app-root',
+  template: `
     <section class="py-10 bg-white sm:py-16 lg:py-24">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h2 i18n class="mb-8 text-3xl font-bold text-center text-black">
@@ -32,7 +32,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
         </div>
       </div>
     </section>
-  `
+  `,
 })
 export class AppComponent {
   title = 'angular-template';
