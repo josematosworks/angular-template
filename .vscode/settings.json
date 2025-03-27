@@ -9,13 +9,14 @@
   "search.useIgnoreFiles": true,
   "cSpell.words": [
     "antipatterns",
+    "aura",
+    "bazel",
     "Contentful",
     "FORMLY",
     "lintstagedrc",
     "primeng",
     "primeui",
-    "WCAG",
     "tailwindcss",
-    "aura"
+    "WCAG"
   ]
 }
