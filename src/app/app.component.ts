@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonModule],
   selector: 'app-root',
   template: `
     <section class="py-10 bg-white sm:py-16 lg:py-24">

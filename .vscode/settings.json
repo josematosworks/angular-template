@@ -7,5 +7,12 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 2000,
   "search.useIgnoreFiles": true,
-  "cSpell.words": ["antipatterns", "Contentful", "lintstagedrc", "WCAG"]
+  "cSpell.words": [
+    "antipatterns",
+    "Contentful",
+    "lintstagedrc",
+    "primeng",
+    "primeui",
+    "WCAG"
+  ]
 }
