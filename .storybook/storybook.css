@@ -1,0 +1,47 @@
+/* Storybook-specific styles */
+
+/* Basic utility classes for stories */
+
+/* PrimeNG component styles - these will be loaded by the component itself */
+
+/* Story layout helpers */
+.sb-show-main {
+  padding: 1rem;
+}
+
+.story-container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+/* Flex utilities for stories */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+/* Add any additional utility classes needed for stories */

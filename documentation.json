@@ -1,0 +1,1293 @@
+{
+  "pipes": [],
+  "interfaces": [],
+  "injectables": [],
+  "guards": [],
+  "interceptors": [],
+  "classes": [],
+  "directives": [],
+  "components": [
+    {
+      "name": "AppComponent",
+      "id": "component-AppComponent-95eda0ec5d19bfe170ab436882c80023bcea0794f5a6b1c7fbe21b479269356d1855fe6ca90751b43e352dcf4fd5e41206ed500d95f1897cfbf80dc3c1d0189f",
+      "file": "src/app/app.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-root",
+      "styleUrls": [],
+      "styles": [],
+      "template": "<section class=\"py-10 bg-white sm:py-16 lg:py-24\">\n  <div class=\"px-4 mx-auto max-w-7xl sm:px-6 lg:px-8\">\n    <h2 i18n class=\"mb-8 text-3xl font-bold text-center text-black\">\n      Angular Template\n    </h2>\n    <div\n      class=\"grid grid-cols-1 gap-12 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-y-16\"\n    >\n      @for (tech of technologies; track tech.title) {\n        <div>\n          <div\n            class=\"relative flex items-center justify-center mx-auto\"\n            [innerHTML]=\"tech.icon\"\n          ></div>\n          <h3 i18n class=\"mt-8 text-lg font-semibold text-black\">\n            {{ tech.title }}\n          </h3>\n          <p i18n class=\"mt-4 text-base text-gray-600\">\n            {{ tech.description }}\n          </p>\n        </div>\n      }\n    </div>\n  </div>\n</section>\n",
+      "templateUrl": [],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "sanitizer",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "DomSanitizer",
+          "indexKey": "",
+          "optional": false,
+          "description": "",
+          "line": 47,
+          "modifierKind": [125]
+        },
+        {
+          "name": "technologies",
+          "defaultValue": "[]",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "literal type[]",
+          "indexKey": "",
+          "optional": false,
+          "description": "",
+          "line": 40
+        },
+        {
+          "name": "title",
+          "defaultValue": "'angular-template'",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "string",
+          "indexKey": "",
+          "optional": false,
+          "description": "",
+          "line": 39
+        }
+      ],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [
+        {
+          "name": "CommonModule",
+          "type": "module"
+        },
+        {
+          "name": "ButtonModule",
+          "type": "module"
+        }
+      ],
+      "description": "",
+      "rawdescription": "\n",
+      "type": "component",
+      "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component } from '@angular/core';\nimport { DomSanitizer, SafeHtml } from '@angular/platform-browser';\nimport { ButtonModule } from 'primeng/button';\n\n@Component({\n  standalone: true,\n  imports: [CommonModule, ButtonModule],\n  selector: 'app-root',\n  template: `\n    <section class=\"py-10 bg-white sm:py-16 lg:py-24\">\n      <div class=\"px-4 mx-auto max-w-7xl sm:px-6 lg:px-8\">\n        <h2 i18n class=\"mb-8 text-3xl font-bold text-center text-black\">\n          Angular Template\n        </h2>\n        <div\n          class=\"grid grid-cols-1 gap-12 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-y-16\"\n        >\n          @for (tech of technologies; track tech.title) {\n            <div>\n              <div\n                class=\"relative flex items-center justify-center mx-auto\"\n                [innerHTML]=\"tech.icon\"\n              ></div>\n              <h3 i18n class=\"mt-8 text-lg font-semibold text-black\">\n                {{ tech.title }}\n              </h3>\n              <p i18n class=\"mt-4 text-base text-gray-600\">\n                {{ tech.description }}\n              </p>\n            </div>\n          }\n        </div>\n      </div>\n    </section>\n  `,\n})\nexport class AppComponent {\n  title = 'angular-template';\n  technologies: {\n    title: string;\n    description: string;\n    iconColor: string;\n    icon: SafeHtml;\n  }[] = [];\n\n  constructor(public sanitizer: DomSanitizer) {\n    this.technologies = [\n      {\n        title: 'Angular 19.2.4',\n        description:\n          'Modern frontend framework for building scalable applications',\n        iconColor: 'text-red-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg\n            class=\"w-16 h-16 text-red-600\"\n            viewBox=\"0 0 186 200\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n          >\n            <path\n              d=\"M93 0L0 33.2L14.2 156.3L93 200L171.8 156.3L186 33.2L93 0Z\"\n              fill=\"currentColor\"\n            />\n            <path\n              d=\"M93 0V22.2V22.1V123.4V200L171.8 156.3L186 33.2L93 0Z\"\n              fill-opacity=\"0.5\"\n              fill=\"currentColor\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'RxJS',\n        description: 'Reactive programming for async data streams',\n        iconColor: 'text-purple-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"40\" height=\"40\">\n            <!-- RxJS SVG Icon -->\n            <circle cx=\"50\" cy=\"50\" r=\"45\" stroke=\"#E65100\" stroke-width=\"10\" fill=\"none\"/>\n            <path d=\"M25 50 L75 50\" stroke=\"#E65100\" stroke-width=\"10\" stroke-linecap=\"round\"/>\n          </svg>\n        `),\n      },\n      {\n        title: 'TypeScript',\n        description: 'Strongly typed programming language',\n        iconColor: 'text-blue-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-blue-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Tailwind CSS',\n        description: 'Utility-first CSS framework',\n        iconColor: 'text-teal-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-teal-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.31-.74-1.91-1.35C15.61 7.15 14.5 6 12 6zm-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.31-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Nx',\n        description: 'Monorepo management tool',\n        iconColor: 'text-orange-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-blue-700\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M12 0L1.75 6v12L12 24l10.25-6V6L12 0zm-8.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5v-9z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Jest',\n        description: 'Testing framework for unit tests',\n        iconColor: 'text-red-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-red-500\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M22.251 11.82a3.117 3.117 0 0 0-2.328-3.01L22.911 0H8.104L11.1 8.838a3.116 3.116 0 0 0-2.244 2.988c0 1.043.52 1.967 1.313 2.536a8.279 8.279 0 0 1-1.084 1.244 8.14 8.14 0 0 1-2.55 1.647c-.834-.563-1.195-1.556-.869-2.446a3.11 3.11 0 0 0-.91-6.08 3.117 3.117 0 0 0-3.113 3.113c0 .848.347 1.626.903 2.182-.048.097-.097.195-.146.299-.465.959-.993 2.043-1.195 3.259-.403 2.432.257 4.384 1.849 5.489A5.093 5.093 0 0 0 5.999 24c1.827 0 3.682-.917 5.475-1.807 1.279-.632 2.599-1.292 3.898-1.612.48-.118.98-.187 1.508-.264 1.07-.153 2.175-.312 3.168-.89a4.482 4.482 0 0 0 2.182-3.091c.174-.994 0-1.994-.444-2.87.298-.48.465-1.042.465-1.647zm-1.355 0c0 .965-.785 1.75-1.75 1.75a1.753 1.753 0 0 1-1.085-3.126l.007-.007c.056-.042.118-.084.18-.125 0 0 .008 0 .008-.007.028-.014.055-.035.083-.05.007 0 .014-.006.021-.006.028-.014.063-.028.097-.042.035-.014.07-.027.098-.041.007 0 .013-.007.02-.007.028-.007.056-.021.084-.028.007 0 .02-.007.028-.007.034-.007.062-.014.097-.02h.007l.104-.022c.007 0 .02 0 .028-.007.028 0 .055-.007.083-.007h.035c.035 0 .07-.007.111-.007h.09c.028 0 .05 0 .077.007h.014c.055.007.111.014.167.028a1.766 1.766 0 0 1 1.396 1.723zM10.043 1.39h10.93l-2.509 7.4c-.104.02-.208.055-.312.09l-2.64-5.385-2.648 5.35c-.104-.034-.216-.055-.327-.076l-2.494-7.38zm4.968 9.825a3.083 3.083 0 0 0-.938-1.668l1.438-2.904 1.452 2.967c-.43.43-.743.98-.868 1.605H15.01zm-3.481-1.098c.034-.007.062-.014.097-.02h.02c.029-.008.056-.008.084-.015h.028c.028 0 .049-.007.076-.007h.271c.028 0 .049.007.07.007.014 0 .02 0 .035.007.027.007.048.007.076.014.007 0 .014 0 .028.007l.097.02h.007c.028.008.056.015.083.029.007 0 .014.007.028.007.021.007.049.014.07.027.007 0 .014.007.02.007.028.014.056.021.084.035h.007a.374.374 0 0 1 .09.049h.007c.028.014.056.034.084.048.007 0 .007.007.013.007.028.014.05.035.077.049l.007.007c.083.062.16.132.236.201l.007.007a1.747 1.747 0 0 1 .48 1.209 1.752 1.752 0 0 1-3.502 0 1.742 1.742 0 0 1 1.32-1.695zm-6.838-.049c.966 0 1.751.786 1.751 1.751s-.785 1.751-1.75 1.751-1.752-.785-1.752-1.75.786-1.752 1.751-1.752zm16.163 6.025a3.07 3.07 0 0 1-1.508 2.133c-.758.438-1.689.577-2.669.716a17.29 17.29 0 0 0-1.64.291c-1.445.355-2.834 1.05-4.182 1.717-1.724.854-3.35 1.66-4.857 1.66a3.645 3.645 0 0 1-2.154-.688c-1.529-1.056-1.453-3.036-1.272-4.12.167-1.015.632-1.966 1.077-2.877.028-.055.049-.104.077-.16.152.056.312.098.479.126-.264 1.473.486 2.994 1.946 3.745l.264.139.284-.104c1.216-.431 2.342-1.133 3.336-2.071a9.334 9.334 0 0 0 1.445-1.716c.16.027.32.034.48.034a3.117 3.117 0 0 0 3.008-2.327h1.167a3.109 3.109 0 0 0 3.01 2.327c.576 0 1.11-.16 1.57-.43.18.52.236 1.063.139 1.605z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Playwright',\n        description: 'End-to-end testing automation',\n        iconColor: 'text-green-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-green-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z\"\n            />\n            <path\n              fill=\"currentColor\"\n              d=\"M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'ESLint',\n        description: 'Linting and code quality tool',\n        iconColor: 'text-yellow-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-purple-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M7.95 2L4 6v12l4 4h8l4-4V6l-4-4h-8zm8.05 16l-2 2h-4l-2-2V6l2-2h4l2 2v12z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Zone.js',\n        description: 'Manages asynchronous operations',\n        iconColor: 'text-orange-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-orange-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z\"\n            />\n            <path\n              fill=\"currentColor\"\n              d=\"M12 17.25a.75.75 0 01-.75-.75v-4.5a.75.75 0 011.5 0v4.5a.75.75 0 01-.75.75zM12 9a1 1 0 110-2 1 1 0 010 2z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Angular CDK',\n        description: 'Component Development Kit',\n        iconColor: 'text-red-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-red-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M12 2L2 7l1.63 14.27L12 26l8.37-4.73L22 7l-10-5zm0 3.84L18.77 9L12 13.54L5.23 9L12 5.84z\"\n            />\n            <path\n              fill=\"currentColor\"\n              opacity=\"0.8\"\n              d=\"M12 13.54v8.14l6.77-3.82l1.23-10.86L12 13.54z\"\n            />\n            <path\n              fill=\"currentColor\"\n              opacity=\"0.3\"\n              d=\"M12 13.54L5.23 9L4 19.86L12 21.68V13.54z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Prettier',\n        description: 'Code formatter for consistency',\n        iconColor: 'text-yellow-600',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-pink-600\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M8.571 23.429A.571.571 0 0 1 8 24H2.286a.571.571 0 0 1 0-1.143H8c.316 0 .571.256.571.572zM8 20.57H6.857a.571.571 0 0 0 0 1.143H8a.571.571 0 0 0 0-1.143zm-5.714 1.143H4.57a.571.571 0 0 0 0-1.143H2.286a.571.571 0 0 0 0 1.143zM8 18.286H2.286a.571.571 0 0 0 0 1.143H8a.571.571 0 0 0 0-1.143zM16 16H2.286a.571.571 0 0 0 0 1.143H16A.571.571 0 0 0 16 16zM2.286 14.857H16a.571.571 0 0 0 0-1.143H2.286a.571.571 0 0 0 0 1.143zm19.428-3.428H2.286a.571.571 0 0 0 0 1.142h19.428a.571.571 0 0 0 0-1.142zm0-2.286H2.286a.571.571 0 0 0 0 1.143h19.428a.571.571 0 0 0 0-1.143zm0-2.286H2.286a.571.571 0 0 0 0 1.143h19.428a.571.571 0 0 0 0-1.143zm0-2.286H2.286a.571.571 0 0 0 0 1.143h19.428a.571.571 0 0 0 0-1.143zm0-2.285H2.286a.571.571 0 0 0 0 1.143h19.428a.571.571 0 0 0 0-1.143z\"\n            />\n          </svg>\n        `),\n      },\n      {\n        title: 'Nx Cloud',\n        description: 'Distributed computing and caching',\n        iconColor: 'text-blue-700',\n        icon: this.sanitizer.bypassSecurityTrustHtml(`\n          <svg class=\"w-16 h-16 text-blue-700\" viewBox=\"0 0 24 24\">\n            <path\n              fill=\"currentColor\"\n              d=\"M12 3l9 5v8l-9 5-9-5V8l9-5zm0 2.5L5.5 9v6L12 18.5l6.5-3.5V9L12 5.5z\"\n            />\n            <path\n              fill=\"currentColor\"\n              opacity=\"0.5\"\n              d=\"M12 7l-4 2v4l4 2 4-2V9l-4-2zm0 1.5l2 1v2l-2 1-2-1v-2l2-1z\"\n            />\n            <path\n              fill=\"currentColor\"\n              d=\"M12 1l10 5.5v11L12 23l-10-5.5v-11L12 1zm0 2.236L3.618 8.236v7.528L12 20.764l8.382-5v-7.528L12 3.236z\"\n            />\n          </svg>\n        `),\n      },\n    ];\n  }\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "args": [
+          {
+            "name": "sanitizer",
+            "type": "DomSanitizer",
+            "deprecated": false,
+            "deprecationMessage": ""
+          }
+        ],
+        "line": 45,
+        "jsdoctags": [
+          {
+            "name": "sanitizer",
+            "type": "DomSanitizer",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "text": "param"
+            }
+          }
+        ]
+      },
+      "extends": []
+    },
+    {
+      "name": "ButtonComponent",
+      "id": "component-ButtonComponent-8391aaa99661b9f45048110c105ed4efb7d300c1ac8d12e8067f3340590fc3ff8d1ebf76dcd62861c278a11bc74807a7a4c256794242b9715cdcb414e9056a37",
+      "file": "src/app/shared/ui-kit/button/button.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-button",
+      "styleUrls": [],
+      "styles": [],
+      "templateUrl": ["./button.component.html"],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [
+        {
+          "name": "disabled",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Whether the button is disabled</p>\n",
+          "line": 63,
+          "rawdescription": "\n\nWhether the button is disabled\n",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "fullWidth",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Whether the button is full width</p>\n",
+          "line": 73,
+          "rawdescription": "\n\nWhether the button is full width\n",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "loading",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Whether the button is in loading state</p>\n",
+          "line": 68,
+          "rawdescription": "\n\nWhether the button is in loading state\n",
+          "modifierKind": [148],
+          "required": false
+        }
+      ],
+      "outputsClass": [
+        {
+          "name": "buttonClick",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Click event emitter</p>\n",
+          "line": 98,
+          "rawdescription": "\n\nClick event emitter\n",
+          "modifierKind": [148],
+          "required": false
+        }
+      ],
+      "propertiesClass": [
+        {
+          "name": "additionalClass",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Additional CSS classes</p>\n",
+          "line": 93,
+          "rawdescription": "\n\nAdditional CSS classes\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "ariaLabel",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>ARIA label for accessibility</p>\n",
+          "line": 88,
+          "rawdescription": "\n\nARIA label for accessibility\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "badge",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Badge text to display</p>\n",
+          "line": 78,
+          "rawdescription": "\n\nBadge text to display\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "badgeClass",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Badge CSS class</p>\n",
+          "line": 83,
+          "rawdescription": "\n\nBadge CSS class\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "buttonClick",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Click event emitter</p>\n",
+          "line": 98,
+          "rawdescription": "\n\nClick event emitter\n",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Whether the button is disabled</p>\n",
+          "line": 63,
+          "rawdescription": "\n\nWhether the button is disabled\n",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "fullWidth",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Whether the button is full width</p>\n",
+          "line": 73,
+          "rawdescription": "\n\nWhether the button is full width\n",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "icon",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Button icon (PrimeNG icon name)</p>\n",
+          "line": 43,
+          "rawdescription": "\n\nButton icon (PrimeNG icon name)\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "iconPosition",
+          "defaultValue": "input<ButtonIconPosition>('left')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Position of the icon</p>\n",
+          "line": 48,
+          "rawdescription": "\n\nPosition of the icon\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "label",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Button label text</p>\n",
+          "line": 38,
+          "rawdescription": "\n\nButton label text\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "loading",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Whether the button is in loading state</p>\n",
+          "line": 68,
+          "rawdescription": "\n\nWhether the button is in loading state\n",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "size",
+          "defaultValue": "input<ButtonSize>('medium')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Button size</p>\n",
+          "line": 58,
+          "rawdescription": "\n\nButton size\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "styleClass",
+          "defaultValue": "computed<string>(() => {\n    return buildButtonStyleClass(\n      this.variant(),\n      this.size(),\n      this.fullWidth(),\n      this.additionalClass(),\n    );\n  })",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Get the combined style class based on variant, size, and other properties</p>\n",
+          "line": 103,
+          "rawdescription": "\n\nGet the combined style class based on variant, size, and other properties\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "type",
+          "defaultValue": "input<ButtonType>('button')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Button type (button, submit, reset)</p>\n",
+          "line": 33,
+          "rawdescription": "\n\nButton type (button, submit, reset)\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "variant",
+          "defaultValue": "input<ButtonVariant>('primary')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Button variant</p>\n",
+          "line": 53,
+          "rawdescription": "\n\nButton variant\n",
+          "modifierKind": [148]
+        }
+      ],
+      "methodsClass": [
+        {
+          "name": "handleClick",
+          "args": [
+            {
+              "name": "event",
+              "type": "Event",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 115,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nHandle button click event\n",
+          "description": "<p>Handle button click event</p>\n",
+          "jsdoctags": [
+            {
+              "name": "event",
+              "type": "Event",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        }
+      ],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [
+        {
+          "name": "CommonModule",
+          "type": "module"
+        },
+        {
+          "name": "ButtonModule",
+          "type": "module"
+        }
+      ],
+      "description": "<p>Button component based on PrimeNG Button\nProvides a consistent button styling across the application</p>\n",
+      "rawdescription": "\n\nButton component based on PrimeNG Button\nProvides a consistent button styling across the application\n",
+      "type": "component",
+      "sourceCode": "import { CommonModule } from '@angular/common';\nimport {\n  ChangeDetectionStrategy,\n  Component,\n  computed,\n  input,\n  output,\n} from '@angular/core';\nimport { ButtonModule } from 'primeng/button';\nimport { buildButtonStyleClass } from './button.styles';\nimport {\n  ButtonIconPosition,\n  ButtonSize,\n  ButtonType,\n  ButtonVariant,\n} from './button.types';\n\n/**\n * Button component based on PrimeNG Button\n * Provides a consistent button styling across the application\n */\n@Component({\n  selector: 'app-button',\n  standalone: true,\n  imports: [CommonModule, ButtonModule],\n  templateUrl: './button.component.html',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ButtonComponent {\n  /**\n   * Button type (button, submit, reset)\n   */\n  readonly type = input<ButtonType>('button');\n\n  /**\n   * Button label text\n   */\n  readonly label = input<string>('');\n\n  /**\n   * Button icon (PrimeNG icon name)\n   */\n  readonly icon = input<string>('');\n\n  /**\n   * Position of the icon\n   */\n  readonly iconPosition = input<ButtonIconPosition>('left');\n\n  /**\n   * Button variant\n   */\n  readonly variant = input<ButtonVariant>('primary');\n\n  /**\n   * Button size\n   */\n  readonly size = input<ButtonSize>('medium');\n\n  /**\n   * Whether the button is disabled\n   */\n  readonly disabled = input<boolean>(false);\n\n  /**\n   * Whether the button is in loading state\n   */\n  readonly loading = input<boolean>(false);\n\n  /**\n   * Whether the button is full width\n   */\n  readonly fullWidth = input<boolean>(false);\n\n  /**\n   * Badge text to display\n   */\n  readonly badge = input<string>('');\n\n  /**\n   * Badge CSS class\n   */\n  readonly badgeClass = input<string>('');\n\n  /**\n   * ARIA label for accessibility\n   */\n  readonly ariaLabel = input<string>('');\n\n  /**\n   * Additional CSS classes\n   */\n  readonly additionalClass = input<string>('');\n\n  /**\n   * Click event emitter\n   */\n  readonly buttonClick = output<Event>();\n\n  /**\n   * Get the combined style class based on variant, size, and other properties\n   */\n  readonly styleClass = computed<string>(() => {\n    return buildButtonStyleClass(\n      this.variant(),\n      this.size(),\n      this.fullWidth(),\n      this.additionalClass(),\n    );\n  });\n\n  /**\n   * Handle button click event\n   */\n  handleClick(event: Event): void {\n    if (!this.disabled() && !this.loading()) {\n      this.buttonClick.emit(event);\n    }\n  }\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": [],
+      "templateData": "<!-- eslint-disable @angular-eslint/template/no-call-expression -->\n<p-button\n  [attr.aria-label]=\"ariaLabel() || label()\"\n  [badge]=\"badge()\"\n  [badgeClass]=\"badgeClass()\"\n  [disabled]=\"disabled()\"\n  [icon]=\"icon()\"\n  [iconPos]=\"iconPosition()\"\n  [label]=\"label()\"\n  [loading]=\"loading()\"\n  [styleClass]=\"styleClass()\"\n  [type]=\"type()\"\n  (onClick)=\"handleClick($event)\"\n/>\n<!-- eslint-enable @angular-eslint/template/no-call-expression -->\n"
+    }
+  ],
+  "modules": [],
+  "miscellaneous": {
+    "variables": [
+      {
+        "name": "appConfig",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/app.config.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "ApplicationConfig",
+        "defaultValue": "{\n  providers: [\n    provideRouter(routes),\n    provideClientHydration(),\n    provideAnimationsAsync(),\n    providePrimeNG({\n      theme: {\n        preset: Aura,\n      },\n    }),\n  ],\n}"
+      },
+      {
+        "name": "bootstrap",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/main.server.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "",
+        "defaultValue": "() => bootstrapApplication(AppComponent, config)"
+      },
+      {
+        "name": "config",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/app.config.server.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "",
+        "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+      },
+      {
+        "name": "serverConfig",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/app.config.server.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "ApplicationConfig",
+        "defaultValue": "{\n  providers: [provideServerRendering()],\n}"
+      }
+    ],
+    "functions": [
+      {
+        "name": "buildButtonStyleClass",
+        "file": "src/app/shared/ui-kit/button/button.styles.ts",
+        "ctype": "miscellaneous",
+        "subtype": "function",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Builds the complete style class string for a button</p>\n",
+        "args": [
+          {
+            "name": "variant",
+            "type": "ButtonVariant",
+            "deprecated": false,
+            "deprecationMessage": ""
+          },
+          {
+            "name": "size",
+            "type": "ButtonSize",
+            "deprecated": false,
+            "deprecationMessage": ""
+          },
+          {
+            "name": "fullWidth",
+            "type": "boolean",
+            "deprecated": false,
+            "deprecationMessage": ""
+          },
+          {
+            "name": "additionalClass",
+            "type": "string",
+            "deprecated": false,
+            "deprecationMessage": ""
+          }
+        ],
+        "returnType": "string",
+        "jsdoctags": [
+          {
+            "name": {
+              "pos": 1077,
+              "end": 1084,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "variant"
+            },
+            "type": "ButtonVariant",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "pos": 1071,
+              "end": 1076,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "param"
+            },
+            "comment": "<p>Button variant</p>\n"
+          },
+          {
+            "name": {
+              "pos": 1110,
+              "end": 1114,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "size"
+            },
+            "type": "ButtonSize",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "pos": 1104,
+              "end": 1109,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "param"
+            },
+            "comment": "<p>Button size</p>\n"
+          },
+          {
+            "name": {
+              "pos": 1137,
+              "end": 1146,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "fullWidth"
+            },
+            "type": "boolean",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "pos": 1131,
+              "end": 1136,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "param"
+            },
+            "comment": "<p>Whether the button is full width</p>\n"
+          },
+          {
+            "name": {
+              "pos": 1190,
+              "end": 1205,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "additionalClass"
+            },
+            "type": "string",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "pos": 1184,
+              "end": 1189,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "param"
+            },
+            "comment": "<p>Additional CSS classes</p>\n"
+          },
+          {
+            "tagName": {
+              "pos": 1233,
+              "end": 1240,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "returns"
+            },
+            "comment": "<p>Complete CSS class string</p>\n"
+          }
+        ]
+      },
+      {
+        "name": "getSizeClasses",
+        "file": "src/app/shared/ui-kit/button/button.styles.ts",
+        "ctype": "miscellaneous",
+        "subtype": "function",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Generates style classes for button sizes</p>\n",
+        "args": [
+          {
+            "name": "size",
+            "type": "ButtonSize",
+            "deprecated": false,
+            "deprecationMessage": ""
+          }
+        ],
+        "returnType": "string",
+        "jsdoctags": [
+          {
+            "name": {
+              "pos": 739,
+              "end": 743,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "size"
+            },
+            "type": "ButtonSize",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "pos": 733,
+              "end": 738,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "param"
+            },
+            "comment": "<p>Button size</p>\n"
+          },
+          {
+            "tagName": {
+              "pos": 760,
+              "end": 767,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "returns"
+            },
+            "comment": "<p>CSS class string for the size</p>\n"
+          }
+        ]
+      },
+      {
+        "name": "getVariantClasses",
+        "file": "src/app/shared/ui-kit/button/button.styles.ts",
+        "ctype": "miscellaneous",
+        "subtype": "function",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Generates style classes for button variants</p>\n",
+        "args": [
+          {
+            "name": "variant",
+            "type": "ButtonVariant",
+            "deprecated": false,
+            "deprecationMessage": ""
+          }
+        ],
+        "returnType": "string",
+        "jsdoctags": [
+          {
+            "name": {
+              "pos": 122,
+              "end": 129,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "variant"
+            },
+            "type": "ButtonVariant",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "tagName": {
+              "pos": 116,
+              "end": 121,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "param"
+            },
+            "comment": "<p>Button variant</p>\n"
+          },
+          {
+            "tagName": {
+              "pos": 149,
+              "end": 156,
+              "kind": 80,
+              "id": 0,
+              "flags": 16777216,
+              "transformFlags": 0,
+              "escapedText": "returns"
+            },
+            "comment": "<p>CSS class string for the variant</p>\n"
+          }
+        ]
+      }
+    ],
+    "typealiases": [
+      {
+        "name": "ButtonIconPosition",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "\"left\" | \"right\"",
+        "file": "src/app/shared/ui-kit/button/button.types.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Button icon position options</p>\n",
+        "kind": 192
+      },
+      {
+        "name": "ButtonSize",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "\"small\" | \"medium\" | \"large\"",
+        "file": "src/app/shared/ui-kit/button/button.types.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Button size options</p>\n",
+        "kind": 192
+      },
+      {
+        "name": "ButtonType",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "\"button\" | \"submit\" | \"reset\"",
+        "file": "src/app/shared/ui-kit/button/button.types.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Button type definition</p>\n",
+        "kind": 192
+      },
+      {
+        "name": "ButtonVariant",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "\"primary\" | \"secondary\" | \"success\" | \"info\" | \"warning\" | \"danger\" | \"text\"",
+        "file": "src/app/shared/ui-kit/button/button.types.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "<p>Button variant options</p>\n",
+        "kind": 192
+      }
+    ],
+    "enumerations": [],
+    "groupedVariables": {
+      "src/app/app.config.ts": [
+        {
+          "name": "appConfig",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/app.config.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "ApplicationConfig",
+          "defaultValue": "{\n  providers: [\n    provideRouter(routes),\n    provideClientHydration(),\n    provideAnimationsAsync(),\n    providePrimeNG({\n      theme: {\n        preset: Aura,\n      },\n    }),\n  ],\n}"
+        }
+      ],
+      "src/main.server.ts": [
+        {
+          "name": "bootstrap",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/main.server.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "defaultValue": "() => bootstrapApplication(AppComponent, config)"
+        }
+      ],
+      "src/app/app.config.server.ts": [
+        {
+          "name": "config",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/app.config.server.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+        },
+        {
+          "name": "serverConfig",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/app.config.server.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "ApplicationConfig",
+          "defaultValue": "{\n  providers: [provideServerRendering()],\n}"
+        }
+      ]
+    },
+    "groupedFunctions": {
+      "src/app/shared/ui-kit/button/button.styles.ts": [
+        {
+          "name": "buildButtonStyleClass",
+          "file": "src/app/shared/ui-kit/button/button.styles.ts",
+          "ctype": "miscellaneous",
+          "subtype": "function",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Builds the complete style class string for a button</p>\n",
+          "args": [
+            {
+              "name": "variant",
+              "type": "ButtonVariant",
+              "deprecated": false,
+              "deprecationMessage": ""
+            },
+            {
+              "name": "size",
+              "type": "ButtonSize",
+              "deprecated": false,
+              "deprecationMessage": ""
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": ""
+            },
+            {
+              "name": "additionalClass",
+              "type": "string",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "returnType": "string",
+          "jsdoctags": [
+            {
+              "name": {
+                "pos": 1077,
+                "end": 1084,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "variant"
+              },
+              "type": "ButtonVariant",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "pos": 1071,
+                "end": 1076,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "param"
+              },
+              "comment": "<p>Button variant</p>\n"
+            },
+            {
+              "name": {
+                "pos": 1110,
+                "end": 1114,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "size"
+              },
+              "type": "ButtonSize",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "pos": 1104,
+                "end": 1109,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "param"
+              },
+              "comment": "<p>Button size</p>\n"
+            },
+            {
+              "name": {
+                "pos": 1137,
+                "end": 1146,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "fullWidth"
+              },
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "pos": 1131,
+                "end": 1136,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "param"
+              },
+              "comment": "<p>Whether the button is full width</p>\n"
+            },
+            {
+              "name": {
+                "pos": 1190,
+                "end": 1205,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "additionalClass"
+              },
+              "type": "string",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "pos": 1184,
+                "end": 1189,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "param"
+              },
+              "comment": "<p>Additional CSS classes</p>\n"
+            },
+            {
+              "tagName": {
+                "pos": 1233,
+                "end": 1240,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "returns"
+              },
+              "comment": "<p>Complete CSS class string</p>\n"
+            }
+          ]
+        },
+        {
+          "name": "getSizeClasses",
+          "file": "src/app/shared/ui-kit/button/button.styles.ts",
+          "ctype": "miscellaneous",
+          "subtype": "function",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Generates style classes for button sizes</p>\n",
+          "args": [
+            {
+              "name": "size",
+              "type": "ButtonSize",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "returnType": "string",
+          "jsdoctags": [
+            {
+              "name": {
+                "pos": 739,
+                "end": 743,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "size"
+              },
+              "type": "ButtonSize",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "pos": 733,
+                "end": 738,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "param"
+              },
+              "comment": "<p>Button size</p>\n"
+            },
+            {
+              "tagName": {
+                "pos": 760,
+                "end": 767,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "returns"
+              },
+              "comment": "<p>CSS class string for the size</p>\n"
+            }
+          ]
+        },
+        {
+          "name": "getVariantClasses",
+          "file": "src/app/shared/ui-kit/button/button.styles.ts",
+          "ctype": "miscellaneous",
+          "subtype": "function",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Generates style classes for button variants</p>\n",
+          "args": [
+            {
+              "name": "variant",
+              "type": "ButtonVariant",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "returnType": "string",
+          "jsdoctags": [
+            {
+              "name": {
+                "pos": 122,
+                "end": 129,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "variant"
+              },
+              "type": "ButtonVariant",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "pos": 116,
+                "end": 121,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "param"
+              },
+              "comment": "<p>Button variant</p>\n"
+            },
+            {
+              "tagName": {
+                "pos": 149,
+                "end": 156,
+                "kind": 80,
+                "id": 0,
+                "flags": 16777216,
+                "transformFlags": 0,
+                "escapedText": "returns"
+              },
+              "comment": "<p>CSS class string for the variant</p>\n"
+            }
+          ]
+        }
+      ]
+    },
+    "groupedEnumerations": {},
+    "groupedTypeAliases": {
+      "src/app/shared/ui-kit/button/button.types.ts": [
+        {
+          "name": "ButtonIconPosition",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "\"left\" | \"right\"",
+          "file": "src/app/shared/ui-kit/button/button.types.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Button icon position options</p>\n",
+          "kind": 192
+        },
+        {
+          "name": "ButtonSize",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "\"small\" | \"medium\" | \"large\"",
+          "file": "src/app/shared/ui-kit/button/button.types.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Button size options</p>\n",
+          "kind": 192
+        },
+        {
+          "name": "ButtonType",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "\"button\" | \"submit\" | \"reset\"",
+          "file": "src/app/shared/ui-kit/button/button.types.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Button type definition</p>\n",
+          "kind": 192
+        },
+        {
+          "name": "ButtonVariant",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "\"primary\" | \"secondary\" | \"success\" | \"info\" | \"warning\" | \"danger\" | \"text\"",
+          "file": "src/app/shared/ui-kit/button/button.types.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "<p>Button variant options</p>\n",
+          "kind": 192
+        }
+      ]
+    }
+  },
+  "routes": [],
+  "coverage": {
+    "count": 61,
+    "status": "good",
+    "files": [
+      {
+        "filePath": "src/app/app.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "AppComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/5",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/app.config.server.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "config",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/app.config.server.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "serverConfig",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/app.config.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "appConfig",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ButtonComponent",
+        "coveragePercent": 100,
+        "coverageCount": "21/21",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.styles.ts",
+        "type": "function",
+        "linktype": "miscellaneous",
+        "linksubtype": "function",
+        "name": "buildButtonStyleClass",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.styles.ts",
+        "type": "function",
+        "linktype": "miscellaneous",
+        "linksubtype": "function",
+        "name": "getSizeClasses",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.styles.ts",
+        "type": "function",
+        "linktype": "miscellaneous",
+        "linksubtype": "function",
+        "name": "getVariantClasses",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.types.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "ButtonIconPosition",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.types.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "ButtonSize",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.types.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "ButtonType",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/app/shared/ui-kit/button/button.types.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "ButtonVariant",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "src/main.server.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "bootstrap",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      }
+    ]
+  }
+}
