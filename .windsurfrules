@@ -262,3 +262,102 @@ primeng:
     - "Implement proper keyboard navigation for custom PrimeNG implementations"
     - "Use aria attributes as recommended in PrimeNG documentation"
     - "Ensure proper focus management in modal dialogs and overlays"
+
+# UI-Kit Component Recommendations
+ui_kit:
+  directory: "src/app/shared/ui-kit"
+  structure:
+    - "Organize components by type (buttons, inputs, layout, etc.)"
+    - "Co-locate component files (component, styles, tests, stories)"
+    - "Use index.ts files for clean exports"
+
+  # Component architecture
+  architecture:
+    - "Use standalone components with OnPush change detection"
+    - "Implement input signals instead of @Input decorators"
+    - "Create component interfaces for props/inputs"
+    - "Provide sensible defaults for all inputs"
+    - "Document all public APIs with JSDoc comments"
+    - "Implement proper cleanup in ngOnDestroy"
+
+  # Design principles
+  design_principles:
+    - "Follow atomic design principles (atoms, molecules, organisms)"
+    - "Maintain consistent styling across components"
+    - "Support light and dark themes"
+    - "Implement responsive design patterns"
+    - "Ensure all components are accessible"
+
+  # Component features
+  component_features:
+    - "Support various variants (primary, secondary, success, etc.)"
+    - "Implement size options (small, medium, large)"
+    - "Support icon integration with position control"
+    - "Include loading states where appropriate"
+    - "Add badge support for notification indicators"
+    - "Implement proper ARIA attributes for accessibility"
+    - "Support full-width options for responsive layouts"
+    - "Allow custom class injection for specific styling needs"
+
+  # PrimeNG integration
+  primeng_integration:
+    - "Extend PrimeNG components rather than creating from scratch"
+    - "Maintain consistent API with PrimeNG when extending"
+    - "Apply custom styling while preserving PrimeNG functionality"
+    - "Document PrimeNG dependencies for each component"
+
+  # Testing requirements
+  testing:
+    - "Create comprehensive unit tests for all components"
+    - "Test all component variants and states"
+    - "Implement accessibility tests"
+    - "Test component interactions and events"
+    - "Verify proper signal propagation"
+
+# Storybook Stories Configuration
+storybook:
+  enabled: true
+  directory: ".storybook"
+
+  # Story organization
+  organization:
+    - "Co-locate stories with components"
+    - "Use consistent naming convention: component-name.stories.ts"
+    - "Organize stories by component category in Storybook sidebar"
+    - "Group related components together"
+
+  # Story structure
+  structure:
+    - "Create a default story showcasing the basic component"
+    - "Add stories for each component variant"
+    - "Include stories for different component sizes"
+    - "Demonstrate all component states (normal, hover, active, disabled, loading)"
+    - "Show examples with and without icons"
+    - "Demonstrate badge functionality where applicable"
+    - "Include responsive behavior examples"
+
+  # Documentation
+  documentation:
+    - "Use the autodocs tag for automatic documentation generation"
+    - "Document all component props with argTypes"
+    - "Include detailed descriptions for each story"
+    - "Add component usage guidelines in the docs"
+    - "Document accessibility considerations"
+    - "Include code examples for common use cases"
+
+  # Controls and interactions
+  controls:
+    - "Configure interactive controls for all component inputs"
+    - "Set appropriate control types (select, boolean, text, etc.)"
+    - "Define sensible control ranges and options"
+    - "Group related controls together"
+    - "Add actions for event handlers"
+
+  # Best practices
+  best_practices:
+    - "Keep stories simple and focused on one aspect of the component"
+    - "Use decorators for common story setup"
+    - "Implement proper TypeScript typing for all stories"
+    - "Test stories in both light and dark themes"
+    - "Ensure stories work in various viewport sizes"
+    - "Update stories when component APIs change"
