@@ -7,16 +7,6 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 2000,
   "search.useIgnoreFiles": true,
-  "cSpell.words": [
-    "antipatterns",
-    "aura",
-    "bazel",
-    "Contentful",
-    "FORMLY",
-    "lintstagedrc",
-    "primeng",
-    "primeui",
-    "tailwindcss",
-    "WCAG"
-  ]
+  "cSpell.enabled": true,
+  "cSpell.import": ["./.cspell.json"]
 }
