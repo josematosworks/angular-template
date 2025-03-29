@@ -4,3 +4,4 @@ package-lock.json
 !.cspell.json
 README.md
 /documentation
+/ui-kit/components/
