@@ -1,0 +1,11 @@
+/* Custom styles for landing page components */
+
+/* Hero widget custom styles */
+.hero-clip-path {
+  clip-path: ellipse(150% 87% at 93% 13%);
+}
+
+/* SVG mask styles - combined with mask-type-alpha */
+.mask-type-alpha {
+  mask-type: alpha;
+}

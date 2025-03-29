@@ -9,24 +9,26 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should render Angular Template heading', () => {
+  it('should create the app component', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    const app = fixture.componentInstance;
 
-    expect(compiled.querySelector('h2')?.textContent?.trim()).toBe(
-      'Angular Template',
-    );
+    expect(app).toBeTruthy();
   });
 
-  it('should display technology cards', () => {
+  it(`should have title 'angular-template'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    expect(app.title).toEqual('angular-template');
+  });
+
+  it('should render router-outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const cards = compiled.querySelectorAll('h3');
 
-    expect(cards.length).toBe(11); // Total number of technology cards
-    expect(cards[0]?.textContent?.trim()).toBe('Angular 19.2.4');
+    expect(compiled.querySelector('router-outlet')).not.toBeNull();
   });
 
   it(`should have technologies array with correct length`, () => {
