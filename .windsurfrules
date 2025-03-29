@@ -331,3 +331,150 @@ icon_library:
     - "Import LucideAngularModule in shared modules where icons are needed"
     - "Create icon components or directives for frequently used icons"
     - "Document available icons in the project style guide"
+
+# Spartan UI Configuration
+spartan_ui:
+  enabled: true
+  directory: "src/app/shared/spartan-ui"
+
+  # Core principles
+  principles:
+    - "Minimalist design with focus on functionality"
+    - "Performance-first approach with minimal DOM elements"
+    - "Accessibility as a fundamental requirement"
+    - "Consistent visual language across all components"
+    - "Signal-based reactivity for all components"
+    - "Mobile-first responsive design"
+
+  # Component architecture
+  architecture:
+    - "Use standalone components with OnPush change detection"
+    - "Implement input signals instead of @Input decorators"
+    - "Leverage computed signals for derived properties"
+    - "Create effect signals for side effects"
+    - "Implement proper cleanup in ngOnDestroy"
+    - "Use CSS variables for theming and customization"
+    - "Minimize external dependencies"
+
+  # Design system
+  design_system:
+    # Typography
+    typography:
+      font_family: "Inter, system-ui, sans-serif"
+      base_size: "1rem"
+      scale_ratio: 1.25
+      weights:
+        - 400  # Regular
+        - 500  # Medium
+        - 600  # Semi-bold
+        - 700  # Bold
+
+    # Spacing
+    spacing:
+      base_unit: "0.25rem"  # 4px
+      scale: [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96]
+
+    # Elevation
+    elevation:
+      levels: 5
+      properties:
+        - "box-shadow"
+        - "z-index"
+
+    # Border radius
+    border_radius:
+      none: "0"
+      sm: "0.125rem"  # 2px
+      md: "0.25rem"   # 4px
+      lg: "0.5rem"    # 8px
+      xl: "0.75rem"   # 12px
+      full: "9999px"  # Pill shape
+
+  # Component library
+  components:
+    # Core components
+    core:
+      - "Button"
+      - "Card"
+      - "Checkbox"
+      - "Divider"
+      - "Input"
+      - "Radio"
+      - "Select"
+      - "Switch"
+      - "Textarea"
+      - "Badge"
+      - "Avatar"
+      - "Alert"
+      - "Toast"
+      - "Tooltip"
+      - "Modal"
+      - "Tabs"
+
+    # Layout components
+    layout:
+      - "Container"
+      - "Grid"
+      - "Stack"
+      - "Flex"
+      - "Spacer"
+      - "Divider"
+
+    # Navigation components
+    navigation:
+      - "Breadcrumb"
+      - "Pagination"
+      - "Navbar"
+      - "Sidebar"
+      - "Menu"
+      - "Dropdown"
+
+    # Data display components
+    data_display:
+      - "Table"
+      - "List"
+      - "Tree"
+      - "Timeline"
+      - "Stat"
+      - "Progress"
+
+  # Component features
+  component_features:
+    - "Support for light and dark mode"
+    - "Responsive design with mobile-first approach"
+    - "Keyboard navigation and focus management"
+    - "ARIA attributes for accessibility"
+    - "CSS variables for theming"
+    - "Consistent API across components"
+    - "Comprehensive documentation"
+    - "Unit and integration tests"
+    - "Storybook stories"
+
+  # Best practices
+  best_practices:
+    - "Use semantic HTML elements"
+    - "Implement proper keyboard navigation"
+    - "Ensure sufficient color contrast"
+    - "Test with screen readers"
+    - "Provide meaningful error messages"
+    - "Use consistent naming conventions"
+    - "Document all component APIs"
+    - "Create comprehensive test coverage"
+    - "Optimize for performance"
+    - "Follow Angular 19 signal-based patterns"
+
+  # Integration with existing UI libraries
+  integrations:
+    tailwind:
+      enabled: true
+      strategy: "utility-first"
+      custom_config: "tailwind.config.js"
+
+  # Testing requirements
+  testing:
+    - "Unit tests for all components"
+    - "Integration tests for component interactions"
+    - "Accessibility tests using axe-core"
+    - "Visual regression tests"
+    - "Performance benchmarks"
+

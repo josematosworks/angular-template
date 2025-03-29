@@ -54,6 +54,7 @@ angular-template/
 ### UI & Styling
 
 - **Tailwind CSS v4**: Utility-first CSS framework with custom configurations
+- **Spartan UI**: Custom UI component library built on top of PrimeNG with enhanced accessibility
 - **Lucide Icons**: Preferred icon library for consistent, beautiful SVG icons
 - **Angular CDK**: Component Dev Kit for building reusable UI components
 
@@ -78,11 +79,20 @@ angular-template/
 
 ## 🎨 UI Components
 
-The template includes a comprehensive UI kit with reusable components:
+The template includes a comprehensive UI kit with reusable components through Spartan UI:
 
 - **Button**: Customizable button component with variants, sizes, and icon support
 - **Form Components**: Input, select, checkbox, radio, and more
 - **Layout Components**: Card, panel, grid, and more
+
+### Spartan UI
+
+Spartan UI is a custom component library built on top of PrimeNG with enhanced accessibility features and consistent design:
+
+- **Accessibility-First**: All components follow WCAG 2.1 AA standards
+- **Customizable Theming**: Easy theming with CSS variables
+- **Comprehensive Documentation**: Each component includes detailed usage examples
+- **Standalone Architecture**: All components use Angular's standalone component pattern
 
 ### Icon Library Usage
 
