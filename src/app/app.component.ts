@@ -13,20 +13,4 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-template';
-
-  /**
-   * List of technologies used in this template
-   */
-  technologies = [
-    'Angular',
-    'TypeScript',
-    'RxJS',
-    'Tailwind CSS',
-    'ESLint',
-    'Prettier',
-    'Jest',
-    'Cypress',
-    'NgRx',
-    'Angular Signals',
-  ];
 }

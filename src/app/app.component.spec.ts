@@ -30,11 +30,4 @@ describe('AppComponent', () => {
 
     expect(compiled.querySelector('router-outlet')).not.toBeNull();
   });
-
-  it(`should have technologies array with correct length`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-
-    expect(app.technologies.length).toBe(11);
-  });
 });
