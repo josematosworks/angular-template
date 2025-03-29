@@ -6,12 +6,13 @@
   // words - list of words to be always considered correct
   "words": [
     "antipatterns",
-    "autodocs",
     "aura",
+    "autodocs",
     "bazel",
     "Contentful",
     "FORMLY",
     "lintstagedrc",
+    "lucide",
     "primeng",
     "primeui",
     "tailwindcss",

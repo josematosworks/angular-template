@@ -361,3 +361,25 @@ storybook:
     - "Test stories in both light and dark themes"
     - "Ensure stories work in various viewport sizes"
     - "Update stories when component APIs change"
+
+# Icon Library Configuration
+icon_library:
+  preferred: "lucide-icons"
+  configuration:
+    package: "@lucide/angular"
+    version: "latest"
+    import_pattern: "import { Lucide{IconName}Icon } from '@lucide/angular';"
+
+  best_practices:
+    - "Use Lucide icons as the primary icon library throughout the application"
+    - "Import only the specific icons needed in each component"
+    - "Consider using an icon registry service for commonly used icons"
+    - "Ensure proper accessibility with aria-label for icon-only buttons"
+    - "Maintain consistent icon sizing across the application"
+    - "Use appropriate icon colors that maintain sufficient contrast ratios"
+
+  implementation:
+    - "Add @lucide/angular to package.json dependencies"
+    - "Import LucideAngularModule in shared modules where icons are needed"
+    - "Create icon components or directives for frequently used icons"
+    - "Document available icons in the project style guide"

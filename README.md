@@ -1,222 +1,358 @@
 # Angular Template
 
-## Technologies Used
+![Angular Version](https://img.shields.io/badge/Angular-19.2.4-dd0031)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38bdf8)
+![PrimeNG](https://img.shields.io/badge/PrimeNG-19.0-6366f1)
 
-- **Angular**: Version 19.2.4 for building the frontend framework.
-- **RxJS**: For reactive programming and handling asynchronous data streams.
-- **Tailwind CSS**: Utility-first CSS framework for styling with custom configurations.
-- **Nx**: Monorepo management tool to organize and manage the workspace efficiently.
-- **Jest**: Testing framework for unit tests.
-- **Playwright**: For end-to-end testing automation.
-- **ESLint**: For linting and maintaining code quality.
-- **TypeScript**: Strongly typed programming language for enhancing JavaScript with type definitions.
-- **Zone.js**: To manage asynchronous operations in Angular applications.
+A modern, feature-rich Angular 19 template with signal-based state management, comprehensive UI components, and best practices for building scalable web applications.
 
-## Additional Tools
+## 🚀 Features
 
-- **Angular CDK**: Component Dev Kit for building reusable UI components.
-- **Tailwind CSS Animate**: For adding animations using Tailwind CSS.
-- **Prettier**: Code formatter to ensure consistent code style.
-- **Nx Cloud**: For distributed computing and caching to speed up builds and tests.
+- **Angular 19** - Latest Angular framework with standalone components
+- **Signal-based State Management** - Modern reactive state management using Angular signals
+- **PrimeNG Integration** - Comprehensive UI component library
+- **Tailwind CSS v4** - Utility-first CSS framework with custom configurations
+- **Lucide Icons** - Beautiful, consistent SVG icon library
+- **Storybook** - Component documentation and development environment
+- **Comprehensive Form System** - Reusable form components with validation
+- **Accessibility (a11y)** - WCAG 2.1 AA standards compliance
+- **Internationalization (i18n)** - Multi-language support
+- **Robust Testing** - Unit and integration testing setup
+- **Comprehensive Linting** - ESLint, TypeScript, Prettier, and more
+- **Git Hooks** - Husky, Commitlint, and Lint-Staged for code quality
 
-## Development Scripts
+## 📋 Project Structure
 
-- `start`: Runs the application in development mode using Nx.
-- `build`: Builds the application for production.
-- `test`: Runs unit tests using Jest.
-- `lint`: Lints the codebase using ESLint.
-- `format`: Formats the code using Prettier.
+```
+angular-template/
+├── src/
+│   ├── app/
+│   │   ├── shared/           # Shared modules, components, and utilities
+│   │   │   └── ui-kit/       # Reusable UI components
+│   │   │       └── button/   # Example component with stories and types
+│   │   ├── store/            # Signal-based state management
+│   │   ├── features/         # Feature modules
+│   │   ├── core/             # Core services, guards, and interceptors
+│   │   ├── app.component.ts  # Root component
+│   │   ├── app.config.ts     # Application configuration
+│   │   └── app.routes.ts     # Application routes
+│   ├── assets/               # Static assets
+│   └── styles.css            # Global styles
+├── .husky/                   # Git hooks
+├── .storybook/               # Storybook configuration
+└── ...                       # Configuration files
+```
 
-## Getting Started
+## 🔧 Technologies Used
 
-1. **Install Dependencies**
+### Core Framework
+
+- **Angular**: Version 19.2.4 for building the frontend framework
+- **TypeScript**: Strongly typed programming language (v5.8)
+- **RxJS**: For reactive programming and handling asynchronous data streams
+- **Zone.js**: To manage asynchronous operations in Angular applications
+
+### UI & Styling
+
+- **PrimeNG**: Comprehensive UI component library
+- **Tailwind CSS v4**: Utility-first CSS framework with custom configurations
+- **Lucide Icons**: Preferred icon library for consistent, beautiful SVG icons
+- **Angular CDK**: Component Dev Kit for building reusable UI components
+
+### Development Tools
+
+- **Storybook**: Component documentation and development environment
+- **ESLint**: For linting and maintaining code quality
+- **Prettier**: Code formatter to ensure consistent code style
+- **CSpell**: Spell checking for code and documentation
+- **Compodoc**: Documentation generation tool
+
+### Testing
+
+- **Jasmine**: Testing framework for unit tests
+- **Karma**: Test runner for Angular applications
+
+### DevOps
+
+- **Husky**: Git hooks for code quality
+- **Commitlint**: Enforce conventional commit messages
+- **Lint-Staged**: Run linters on staged files
+
+## 🎨 UI Components
+
+The template includes a comprehensive UI kit with reusable components:
+
+- **Button**: Customizable button component with variants, sizes, and icon support
+- **Form Components**: Input, select, checkbox, radio, and more
+- **Layout Components**: Card, panel, grid, and more
+
+### Icon Library Usage
+
+Lucide Icons is the preferred icon library for this project:
+
+```typescript
+// How to import and use Lucide icons
+import { LucideAngularModule } from "@lucide/angular";
+import { LucideHome, LucideSettings, LucideUser } from "@lucide/angular/icons";
+
+@Component({
+  // ...
+  imports: [LucideAngularModule.pick({ LucideHome, LucideSettings, LucideUser })],
+  // ...
+})
+export class MyComponent {
+  // Component implementation
+}
+```
+
+## 📊 Signal-based State Management
+
+The template uses Angular's signal-based state management for reactive, efficient state handling:
+
+- Feature-based store organization
+- Typed signal interfaces
+- Computed signals for derived state
+- Effect signals for side effects
+- Immutable update patterns
+
+## 🌐 Getting Started
+
+### Prerequisites
+
+- Node.js 20.10.0 or higher
+- npm 10 or higher
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd angular-template
+   ```
+
+2. **Install Dependencies**
 
    ```bash
    npm install
    ```
 
-2. **Run the Application**
+3. **Run the Application**
 
    ```bash
    npm start
    ```
 
-3. **Build for Production**
+   The application will be available at `http://localhost:4200`
+
+4. **Run Storybook**
 
    ```bash
-   npm run build
+   npm run storybook
    ```
 
-4. **Run Tests**
+   Storybook will be available at `http://localhost:6006`
 
-   ```bash
-   npm test
-   ```
+## 🛠️ Development Scripts
 
-5. **Lint the Codebase**
+- `npm start` - Runs the application in development mode
+- `npm run build` - Builds the application for production
+- `npm test` - Runs unit tests
+- `npm run test:ci` - Runs tests in CI mode
+- `npm run lint` - Lints the codebase using ESLint
+- `npm run lint:fix` - Fixes linting issues automatically
+- `npm run format` - Formats the code using Prettier
+- `npm run storybook` - Runs Storybook for component development
+- `npm run build-storybook` - Builds Storybook for deployment
+- `npm run compodoc` - Generates documentation with Compodoc
+- `npm run check-spelling` - Checks spelling in the codebase
 
-   ```bash
-   npm run lint
-   ```
+## 🛡️ Quality Assurance Tools
 
-6. **Format the Code**
-   ```bash
-   npm run format
-   ```
+This project includes a comprehensive set of tools to ensure code quality, maintainability, and adherence to best practices.
 
-## Dev Tools Implemented
+> [!TIP]
+> Run all quality checks with a single command:
+>
+> ```sh
+> npm run lint:all
+> ```
 
-This section outlines how each tool is configured, and how they can be leveraged to ensure clean and maintainable code.
+> [!IMPORTANT]
+> While these tools help maintain code quality, they complement (not replace) the best practices outlined in the Angular guides for [Style](https://angular.dev/style-guide), [Security](https://angular.dev/best-practices/security), [Accessibility](https://angular.dev/best-practices/a11y), and [Performance](https://angular.dev/best-practices/runtime-performance).
 
-Use this script to run all checks against all project files:
+### TypeScript Configuration
+
+The project uses strict TypeScript configuration to ensure type safety and code quality:
+
+- `"strict": true` - Enables all strict type checking options
+- Angular's template checking set to 'Strict Mode'
+- Additional compiler options for enhanced type safety:
+  - [`exactOptionalPropertyTypes`](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes) - Ensures optional properties are handled correctly
+  - [`noUnusedLocals`](https://www.typescriptlang.org/tsconfig#noUnusedLocals) - Prevents unused variables
+  - [`noUnusedParameters`](https://www.typescriptlang.org/tsconfig#noUnusedParameters) - Prevents unused function parameters
+  - [`noUncheckedIndexedAccess`](https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess) - Enforces explicit handling of potentially undefined values
+
+**TypeScript Validation Commands:**
 
 ```sh
-npm run lint:all
-```
-
-> [!CAUTION]
-> These tools are not perfect and they are not a substitute for learning and utilizing the best practices outlined in the Angular guides for [Style](https://angular.dev/style-guide), [Security](https://angular.dev/best-practices/security), [Accessibility](https://angular.dev/best-practices/a11y), and [Performance](https://angular.dev/best-practices/runtime-performance).
-
-### TypeScript
-
-In addition to setting `"strict": true`, Angular's template checking is set to 'Strict Mode' in [tsconfig.json](tsconfig.json).
-
-These compiler options have also been added to ensure strict type-checking for optional properties, eliminate unused variables
-and parameters to reduce clutter, and enforce explicit handling of potentially undefined values in arrays or objects:
-
-- [exactOptionalPropertyTypes](https://www.typescriptlang.org/tsconfig#exactOptionalPropertyTypes)
-- [noUnusedLocals](https://www.typescriptlang.org/tsconfig#noUnusedLocals)
-- [noUnusedParameters](https://www.typescriptlang.org/tsconfig#noUnusedParameters)
-- [noUncheckedIndexedAccess](https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess)
-
-To check for errors in \*.ts app files:
-
-```
+# Check app files
 npm run lint:tsc:app
-```
 
-To check for errors in \*.spec.ts test files:
-
-```
+# Check test files
 npm run lint:tsc:spec
-```
 
-To check for errors in all TypeScript files:
-
-```
+# Check all TypeScript files
 npm run lint:tsc:all
 ```
 
-### ESLint
+### ESLint Integration
 
-[ESLint](https://eslint.org/) is used for linting JavaScript, TypeScript, HTML, and JSON files in the project. The linting configuration is set in [eslint.config.js](./eslint.config.js), with specific overrides for the following file types: `*.js`, `*.ts`, `*.spec.ts`, `*.html`, and `*.json`.
+[ESLint](https://eslint.org/) is configured to lint JavaScript, TypeScript, HTML, and JSON files with comprehensive rule sets:
 
-To ensure effective linting for all project files, the following ESLint plugins are used:
+- **[@angular-eslint](https://github.com/angular-eslint/angular-eslint)** - Angular-specific linting rules
+  - [TypeScript rules](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md)
+  - [Template rules](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/README.md)
+- **[@typescript-eslint](https://typescript-eslint.io/)** - TypeScript-specific linting
+  - Uses [strict-type-checked](https://typescript-eslint.io/linting/configs#strict-type-checked) and [stylistic-type-checked](https://typescript-eslint.io/linting/configs#stylistic-type-checked) rule sets
+- **[eslint-plugin-jasmine](https://github.com/tlvince/eslint-plugin-jasmine)** - Test-specific linting
+- **[eslint-plugin-jsonc](https://github.com/ota-meshi/eslint-plugin-jsonc)** - JSON file linting
+- **[eslint-plugin-rxjs](https://github.com/cartant/eslint-plugin-rxjs)** - RxJS-specific linting rules
+- **[eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)** - Prevents conflicts with Prettier
 
-- [@angular-eslint](https://github.com/angular-eslint/angular-eslint)
-  - Enables all TypeScript and template rules unless explicitly disabled or modified.
-  - [@angular-eslint rules configuration matrix](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin/README.md).
-  - [@angular-eslint/template rules configuration matrix](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/README.md).
-- [@typescript-eslint](https://typescript-eslint.io/)
-  - Uses both [strict-type-checked](https://typescript-eslint.io/linting/configs#strict-type-checked) and [stylistic-type-checked](https://typescript-eslint.io/linting/configs#stylistic-type-checked) rule sets.
-  - [typescript-eslint rules configuration matrix](https://typescript-eslint.io/rules/).
-- [eslint-plugin-jasmine](https://github.com/tlvince/eslint-plugin-jasmine)
-  - Uses `recommended` rule set.
-  - [eslint-plugin-jasmine rules configuration matrix](https://typescript-eslint.io/rules/).
-- [eslint-plugin-jsonc](https://github.com/ota-meshi/eslint-plugin-jsonc)
-  - Uses `recommended` rule set.
-  - [eslint-plugin-jsonc rules configuration matrix](https://ota-meshi.github.io/eslint-plugin-jsonc/rules/).
-- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-  - Disables rules that may conflict with Prettier formatting.
-
-To lint all relevant files in the project (not just those in src/):
+**Linting Command:**
 
 ```sh
-npm run lint
+npm run lint     # Check for issues
+npm run lint:fix # Fix automatically fixable issues
 ```
 
-ESLint output is formatted using [eslint-formatter-mo](https://github.com/fengzilong/eslint-formatter-mo). To use normal formatting, remove the `-f mo` option from the `lint` script in [package.json](package.json):
+### Accessibility (a11y) Enforcement
 
-```json
-"lint": "eslint -f mo \"**/*.{js,ts,html,json}\"",
-```
+The project enforces accessibility best practices through linting rules:
 
-> [!TIP]
-> Suppress the urge to immediately set rules to "off" or "warn". First, look up the rule and the problem it is correcting for and discuss the rule with other developers on the project.
+- All accessibility rules from @angular-eslint are enabled by default
+- Covers critical areas like image alt text, form labels, ARIA attributes, and more
+- Helps maintain WCAG 2.1 AA compliance throughout development
 
-#### Accessibility (a11y)
+Refer to the [Accessibility in Angular guide](https://angular.dev/best-practices/a11y) for best practices.
 
-This project enables all the accessibility rules provided by angular-eslint by default (denoted by :accessibility: in the @angular-eslint/template rules configuration matrix linked above).
+### Code Formatting with Prettier
 
-Includes rules for image alt text, form labels, no autofocus, valid ARIA, and more.
+[Prettier](https://prettier.io/) ensures consistent code formatting across the project with several plugins:
 
-These rules are easier to work with if enabled _early_ in the development process and early adoption of these rules is also very helpful for avoiding common accessibility antipatterns.
+- **[prettier-plugin-sh](https://github.com/un-ts/prettier/tree/master/packages/sh)** - Shell script formatting
+- **[prettier-plugin-css-order](https://github.com/Siilwyn/prettier-plugin-css-order)** - CSS property organization
+- **[prettier-plugin-organize-imports](https://github.com/trivago/prettier-plugin-sort-imports)** - Import organization
 
-The [Accessibility in Angular guide](https://angular.dev/best-practices/a11y) is a great place to start learning about accessibility in Angular, and it provides resources on the topic of accessibility.
+Configuration in `.prettierrc.json` includes optimized settings for Angular templates.
 
-### Prettier
-
-[Prettier](https://prettier.io/) is used to enforce consistent code formatting, reducing diffs by minimizing formatting changes.
-
-In [.prettierrc.json](./.prettierrc.json), the `htmlWhitespaceSensitivity` option is set to `ignore` to better format templates. This setting trims unnecessary whitespace around and inside HTML elements. Use `&nbsp;` (non-breaking space) when you need to explicitly maintain spacing between inline elements.
-
-The following Prettier plugins are used:
-
-- [prettier-plugin-sh](https://github.com/un-ts/prettier/tree/master/packages/sh): Formats shell scripts, such as Git hooks.
-- [prettier-plugin-css-order](https://github.com/Siilwyn/prettier-plugin-css-order): Automatically organizes SCSS/CSS properties using [concentric-css](https://github.com/brandon-rhodes/Concentric-CSS)
-- [prettier-plugin-organize-imports](https://github.com/trivago/prettier-plugin-sort-imports): Automatically organizes, arranges, and removes unused imports.
-
-To format files within the project:
+**Formatting Commands:**
 
 ```sh
-npm run format
+npm run format      # Format all files
+npm run lint:format # Check formatting without making changes
 ```
 
-To check if all files are properly formatted:
+### Spell Checking with CSpell
 
-```sh
-npm run lint:format
-```
+[CSpell](https://github.com/streetsidesoftware/cspell) provides comprehensive spell checking for all project files to ensure consistent terminology and prevent typos in code, comments, and documentation.
 
-### CSpell
+- Configuration in `.cspell.json` with project-specific dictionary
+- Integration with VS Code via the [Code Spell Checker Extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- Support for multiple specialized dictionaries: bash, companies, css, html, typescript, and more
+- Quick fix options to add words to project dictionary
 
-[CSpell](https://github.com/streetsidesoftware/cspell) is used for spell checking for all project files.
-
-To add project-specific words, update [.cspell.json](.cspell.json).
-
-The [Code Spell Checker Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) allows you to quickly add misspelled words to the configuration by selecting "Add to config: .cspell.json" from the 'Quick Fix' menu.
-
-The following dictionaries have been enabled: bash, companies, cpp, csharp, css, filetypes, fonts, go, html, latex, misc, node,npm, php, powershell, python,softwareTerms, and typescript.
-
-To find misspelled words in all files within the project:
+**Spell Checking Command:**
 
 ```sh
 npm run lint:spelling
 ```
 
-### VSCode
+### Storybook Integration
 
-The following VSCode extensions will be recommended when opening the project ([.vscode/extensions.json](.vscode/extensions.json)):
+[Storybook](https://storybook.js.org/) is integrated to provide an isolated development environment for UI components:
 
-- [Angular](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
-- [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- Interactive component documentation
+- Visual testing and development
+- Component showcase with various states and configurations
+- Addon support for enhanced functionality
 
-The following VSCode settings have been set in [.vscode/settings.json](.vscode/settings.json):
+**Storybook Commands:**
 
-- Set Prettier as default formatter.
-- Turn on format on save
-- Turn on [fix linting errors on save](https://github.com/microsoft/vscode-eslint?tab=readme-ov-file#version-204).
-- Turn on auto-save and set delay for 3 seconds (doesn't format or fix errors).
-- [Disable VSCode linter for CSS/SCSS](https://github.com/stylelint/vscode-stylelint?tab=readme-ov-file#disable-vs-codes-built-in-linters-optional).
-- [Enable Stylelint linter CSS & SCSS](https://github.com/stylelint/vscode-stylelint?tab=readme-ov-file#%EF%B8%8F-only-css-and-postcss-are-validated-by-default).
+```sh
+npm run storybook       # Start Storybook development server
+npm run build-storybook # Build static Storybook for deployment
+```
 
-### Husky, Commitlint, tsc-files, and Lint-Staged (Git hooks)
+### Documentation Generation
 
-[Husky](https://typicode.github.io/husky/) is used to manage the [pre-commit](.husky/pre-commit), [pre-push](.husky/pre-push), and [commit-msg](.husky/commit-msg) git hooks.
+[Compodoc](https://compodoc.app/) is integrated to generate comprehensive documentation for the project:
 
-[Commitlint](https://commitlint.js.org/#/) is used to enforce good commit messages according to the [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint) configuration in the commit-msg git hook. Additional Commitlint configuration is kept in [commitlint.config.js](./commitlint.config.js).
+- Automatic documentation from TypeScript code
+- Component visualization
+- Module dependencies
+- Code coverage reports
 
-[Lint-staged](https://github.com/lint-staged/lint-staged) is used to run Prettier, ESLint, Stylelint, CSpell, and [tsc-files](https://github.com/gustavopch/tsc-files) in the pre-commit git hook against all staged files. Lint-staged configuration is kept in [.lintstagedrc.json](.lintstagedrc.json)
+**Documentation Command:**
+
+```sh
+npm run compodoc
+```
+
+## 🧰 Development Environment
+
+### VS Code Integration
+
+The project includes optimized VS Code configuration for an enhanced development experience:
+
+**Recommended Extensions ([.vscode/extensions.json](.vscode/extensions.json)):**
+
+- **[Angular](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)** - Enhanced Angular template support
+- **[Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)** - Consistent coding styles
+- **[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)** - Code formatting
+- **[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)** - Integrated linting
+- **[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)** - Spell checking
+
+**Workspace Settings ([.vscode/settings.json](.vscode/settings.json)):**
+
+- Prettier configured as default formatter
+- Format on save enabled
+- Auto-fix linting errors on save
+- Auto-save with 3-second delay
+- Optimized CSS/SCSS linting with Stylelint
+
+## 🔄 Git Workflow
+
+### Git Hooks with Husky
+
+The project uses [Husky](https://typicode.github.io/husky/) to enforce code quality standards through Git hooks:
+
+- **[pre-commit](.husky/pre-commit)**: Runs linters and formatters on staged files
+- **[commit-msg](.husky/commit-msg)**: Validates commit messages against conventional commit format
+- **[pre-push](.husky/pre-push)**: Runs tests to prevent pushing failing code
+
+### Conventional Commits
+
+[Commitlint](https://commitlint.js.org/#/) enforces the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for all commit messages using [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint) with additional configuration in [commitlint.config.js](./commitlint.config.js):
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Types include: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, etc.
+
+### Lint-Staged
+
+[Lint-staged](https://github.com/lint-staged/lint-staged) runs quality checks only on staged files to ensure efficient pre-commit validation:
+
+- TypeScript type checking with [tsc-files](https://github.com/gustavopch/tsc-files)
+- ESLint for linting
+- Prettier for formatting
+- CSpell for spell checking
+- Configuration in [.lintstagedrc.json](.lintstagedrc.json)
