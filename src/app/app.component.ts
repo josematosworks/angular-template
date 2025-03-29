@@ -216,28 +216,6 @@ export class AppComponent {
           </svg>
         `),
       },
-      {
-        title: 'Nx Cloud',
-        description: 'Distributed computing and caching',
-        iconColor: 'text-blue-700',
-        icon: this.sanitizer.bypassSecurityTrustHtml(`
-          <svg class="w-16 h-16 text-blue-700" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M12 3l9 5v8l-9 5-9-5V8l9-5zm0 2.5L5.5 9v6L12 18.5l6.5-3.5V9L12 5.5z"
-            />
-            <path
-              fill="currentColor"
-              opacity="0.5"
-              d="M12 7l-4 2v4l4 2 4-2V9l-4-2zm0 1.5l2 1v2l-2 1-2-1v-2l2-1z"
-            />
-            <path
-              fill="currentColor"
-              d="M12 1l10 5.5v11L12 23l-10-5.5v-11L12 1zm0 2.236L3.618 8.236v7.528L12 20.764l8.382-5v-7.528L12 3.236z"
-            />
-          </svg>
-        `),
-      },
     ];
   }
 }
