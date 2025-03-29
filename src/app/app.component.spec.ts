@@ -25,7 +25,7 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const cards = compiled.querySelectorAll('h3');
 
-    expect(cards.length).toBe(12); // Total number of technology cards
+    expect(cards.length).toBe(11); // Total number of technology cards
     expect(cards[0]?.textContent?.trim()).toBe('Angular 19.2.4');
   });
 
@@ -33,6 +33,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
 
-    expect(app.technologies.length).toBe(12);
+    expect(app.technologies.length).toBe(11);
   });
 });
