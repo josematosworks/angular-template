@@ -3,7 +3,6 @@
 ![Angular Version](https://img.shields.io/badge/Angular-19.2.4-dd0031)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38bdf8)
-![PrimeNG](https://img.shields.io/badge/PrimeNG-19.0-6366f1)
 
 A modern, feature-rich Angular 19 template with signal-based state management, comprehensive UI components, and best practices for building scalable web applications.
 
@@ -11,7 +10,6 @@ A modern, feature-rich Angular 19 template with signal-based state management, c
 
 - **Angular 19** - Latest Angular framework with standalone components
 - **Signal-based State Management** - Modern reactive state management using Angular signals
-- **PrimeNG Integration** - Comprehensive UI component library
 - **Tailwind CSS v4** - Utility-first CSS framework with custom configurations
 - **Lucide Icons** - Beautiful, consistent SVG icon library
 - **Storybook** - Component documentation and development environment
@@ -55,7 +53,6 @@ angular-template/
 
 ### UI & Styling
 
-- **PrimeNG**: Comprehensive UI component library
 - **Tailwind CSS v4**: Utility-first CSS framework with custom configurations
 - **Lucide Icons**: Preferred icon library for consistent, beautiful SVG icons
 - **Angular CDK**: Component Dev Kit for building reusable UI components

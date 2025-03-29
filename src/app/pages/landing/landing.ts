@@ -1,9 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { DividerModule } from 'primeng/divider';
-import { RippleModule } from 'primeng/ripple';
-import { StyleClassModule } from 'primeng/styleclass';
 import { FeaturesWidgetComponent } from './components/features-widget/features-widget.component';
 import { FooterWidgetComponent } from './components/footer-widget/footer-widget.component';
 import { HeroWidgetComponent } from './components/hero-widget/hero-widget.component';
@@ -22,10 +18,6 @@ import { TopbarWidgetComponent } from './components/topbar-widget/topbar-widget.
     HighlightsWidgetComponent,
     PricingWidgetComponent,
     FooterWidgetComponent,
-    RippleModule,
-    StyleClassModule,
-    ButtonModule,
-    DividerModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './landing.scss',

@@ -218,51 +218,6 @@ documentation:
     - "Document component relationships and data flow"
     - "Update diagrams when architecture changes"
 
-# PrimeNG Configuration
-primeng:
-  version: "17.x.x"  # Specify the version compatible with Angular 19
-  theme: "lara-light-blue"  # Default theme
-
-  # Component usage guidelines
-  component_guidelines:
-    - "Use PrimeNG components as standalone imports"
-    - "Implement custom themes using PrimeNG's theming system"
-    - "Extend PrimeNG components rather than creating custom implementations"
-    - "Use PrimeFlex for layout management with PrimeNG components"
-    - "Implement proper accessibility attributes for PrimeNG components"
-
-  # Theming best practices
-  theming:
-    - "Use CSS variables for theme customization"
-    - "Create theme-specific SCSS files for custom theming"
-    - "Implement dark mode support using PrimeNG's theming system"
-    - "Use the provided theme designer for consistent styling"
-    - "Maintain a consistent color palette across custom components"
-
-  # Performance considerations
-  performance:
-    - "Lazy load PrimeNG modules for better initial load time"
-    - "Use virtual scrolling for large data sets with Table/DataView"
-    - "Implement proper row/item recycling with trackBy"
-    - "Optimize dialog/overlay components with dynamic loading"
-    - "Use OnPush change detection with PrimeNG components"
-
-  # Integration with signal store
-  signal_integration:
-    - "Use signals to drive PrimeNG component state"
-    - "Implement proper state management for complex form components"
-    - "Create reusable form controls with PrimeNG and signals"
-    - "Use computed signals for derived component properties"
-    - "Implement proper error handling for PrimeNG form components"
-
-  # Accessibility
-  accessibility:
-    - "Follow PrimeNG's accessibility guidelines"
-    - "Test all PrimeNG components with screen readers"
-    - "Implement proper keyboard navigation for custom PrimeNG implementations"
-    - "Use aria attributes as recommended in PrimeNG documentation"
-    - "Ensure proper focus management in modal dialogs and overlays"
-
 # UI-Kit Component Recommendations
 ui_kit:
   directory: "src/app/shared/ui-kit"
@@ -298,13 +253,6 @@ ui_kit:
     - "Implement proper ARIA attributes for accessibility"
     - "Support full-width options for responsive layouts"
     - "Allow custom class injection for specific styling needs"
-
-  # PrimeNG integration
-  primeng_integration:
-    - "Extend PrimeNG components rather than creating from scratch"
-    - "Maintain consistent API with PrimeNG when extending"
-    - "Apply custom styling while preserving PrimeNG functionality"
-    - "Document PrimeNG dependencies for each component"
 
   # Testing requirements
   testing:

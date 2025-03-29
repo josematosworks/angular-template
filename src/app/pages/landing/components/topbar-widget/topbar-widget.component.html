@@ -42,16 +42,12 @@
 </a>
 
 <a
-  pButton
   severity="secondary"
-  pRipple
   class="lg:!hidden"
   pStyleClass="@next"
   enterClass="hidden"
   leaveToClass="hidden"
-  [hideOnOutsideClick]="true"
   [text]="true"
-  [rounded]="true"
 >
   <i class="pi pi-bars !text-2xl"></i>
 </a>
@@ -64,7 +60,6 @@
   >
     <li>
       <a
-        pRipple
         class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"
         tabindex="0"
         role="button"
@@ -77,7 +72,6 @@
     </li>
     <li>
       <a
-        pRipple
         class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"
         tabindex="0"
         role="button"
@@ -92,7 +86,6 @@
     </li>
     <li>
       <a
-        pRipple
         class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"
         tabindex="0"
         role="button"
@@ -107,7 +100,6 @@
     </li>
     <li>
       <a
-        pRipple
         class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"
         tabindex="0"
         role="button"
@@ -122,25 +114,10 @@
   <div
     class="flex border-t lg:border-t-0 border-surface py-4 lg:py-0 mt-4 lg:mt-0 gap-2"
   >
-    <button
-      pButton
-      pRipple
-      type="button"
-      routerLink="/auth/login"
-      class="p-button"
-      [text]="true"
-      [rounded]="true"
-    >
+    <button type="button" routerLink="/auth/login" class="p-button">
       Login
     </button>
-    <button
-      pButton
-      pRipple
-      type="button"
-      routerLink="/auth/register"
-      class="p-button"
-      [rounded]="true"
-    >
+    <button type="button" routerLink="/auth/register" class="p-button">
       Register
     </button>
   </div>

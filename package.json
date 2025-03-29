@@ -34,12 +34,9 @@
     "@angular/platform-server": "^19.2.4",
     "@angular/router": "^19.2.4",
     "@angular/ssr": "^19.2.5",
-    "@primeng/themes": "^19.0.10",
     "express": "^4.21.1",
     "lucide-angular": "^0.485.0",
-    "primeng": "^19.0.10",
     "rxjs": "~7.8.0",
-    "tailwindcss-primeui": "^0.6.1",
     "tslib": "^2.8.0",
     "zone.js": "^0.15.0"
   },

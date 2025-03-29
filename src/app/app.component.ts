@@ -22,7 +22,6 @@ export class AppComponent {
     'TypeScript',
     'RxJS',
     'Tailwind CSS',
-    'PrimeNG',
     'ESLint',
     'Prettier',
     'Jest',
